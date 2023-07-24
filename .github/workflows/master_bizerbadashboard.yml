@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python soure_root to Azure Web App - bizerbadashboard
+name: Build and deploy Python app to Azure Web App - bizerbadashboard
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
-          name: python-soure_root
+          name: python-app
           path: |
             . 
             !venv/
@@ -51,7 +51,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: python-soure_root
+          name: python-app
           path: .
           
       - name: 'Deploy to Azure Web App'

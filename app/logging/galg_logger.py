@@ -2,8 +2,8 @@ import logging
 import os.path
 import sys
 
-from soure_root import configuration
-from soure_root.logging.handler import ColorizedStreamHandler
+from app import configuration
+from app.logging.handler import ColorizedStreamHandler
 
 DEFAULT_FMT = logging.Formatter(
     '%(asctime)s.%(msecs)03d [%(levelname)8s] %(message)s',
